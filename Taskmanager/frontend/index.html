@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <h1>📋 Task Manager</h1>
+
+    <!-- Task Form -->
+    <form class="task-form" onsubmit="addTask(event)">
+      <input type="text" id="title" placeholder="Enter task title..." required>
+      <textarea id="description" placeholder="Enter description..."></textarea>
+      
+      <div class="date-group">
+        <label>Start:</label>
+        <input type="date" id="startDate">
+        <label>End:</label>
+        <input type="date" id="endDate">
+      </div>
+
+      <button type="submit" class="btn-add">➕ Add Task</button>
+    </form>
+
+    <!-- Task List -->
+    <h2>My Tasks</h2>
+    <ul id="task-list" class="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
